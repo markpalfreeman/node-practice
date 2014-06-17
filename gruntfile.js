@@ -4,11 +4,28 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'public/stylesheets/style.css': 'sass/style.scss'
+        },
+        options: {
+          includePaths: [
+          require('node-bourbon').includePaths,
+          './bower_components/attr-range'
+          ]
+        }
+      }
+    },
+    watch: {
+      source: {
+        files: ['sass/**/*.scss', 'views/**/*.jade'],
+        tasks: ['sass'],
+        options: {
+          livereload: true
         }
       }
     }
   });
 
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.registerTask('default', ['sass']);
 };
+

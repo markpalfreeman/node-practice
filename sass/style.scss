@@ -1,3 +1,10 @@
+@import 'bourbon';
+@import 'attr-range';
+
+* {
+  @include box-sizing(border-box);
+}
+
 $color: #333;
 
 body {
@@ -5,3 +12,19 @@ body {
   color: #eee;
   font-family: Arial;
 }
+
+$marginWidths: 10 30 15 10 !default;
+$paddingWidths: 0 20 !default;
+
+.block-element {
+  @include attr-range(margin, $marginWidths);
+}
+
+.header {
+  @include attr-range(padding, $paddingWidths);
+}
+
+aside {
+  @include attr-range(margin, 0 20 10);
+}
+

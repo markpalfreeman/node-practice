@@ -1,0 +1,6 @@
+{
+  "name": "node-practice",
+  "dependencies": {
+    "attr-range": "*"
+  }
+}

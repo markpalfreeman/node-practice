@@ -1,0 +1,45 @@
+
+/////// Mixin to pass in desired attribute and range of values
+// *-------------------------------------------------------------------------------
+
+
+// Example Sass
+// *-----------------------------------------------
+// $marginWidths: 10 30 15 10 !default;
+// $paddingWidths: 0 20 !default;
+
+// .block-element {
+//   @include attr-range(margin, $marginWidths);
+// }
+
+// .header {
+//   @include attr-range(padding, $paddingWidths);
+// }
+
+// aside {
+//   @include attr-range(margin, 0 20 10);
+// }
+
+// Output CSS
+// *-----------------------------------------------
+// .block-element {
+//   margin: 0.625em 1.875em 0.9375em 0.625em; }
+
+// .header {
+//   padding: 0em 1.25em; }
+
+// aside {
+//   margin: 0em 1.25em 0.625em; }
+
+
+@mixin attr-range($attr: attribute, $range: 0){
+  @if length($range) == 4 {
+    #{$attr}: em(nth($range, 1)) em(nth($range, 2)) em(nth($range, 3)) em(nth($range, 4));
+  } @elseif length($range) == 3 {
+    #{$attr}: em(nth($range, 1)) em(nth($range, 2)) em(nth($range, 3));
+  } @elseif length($range) == 2 {
+    #{$attr}: em(nth($range, 1)) em(nth($range, 2));
+  } @else {
+    #{$attr}: em(nth($range, 1));
+  }
+}

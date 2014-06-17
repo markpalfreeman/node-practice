@@ -1,4 +1,18 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
 body {
   background-color: #333;
   color: #eee;
   font-family: Arial; }
+
+.block-element {
+  margin: 0.625em 1.875em 0.9375em 0.625em; }
+
+.header {
+  padding: 0em 1.25em; }
+
+aside {
+  margin: 0em 1.25em 0.625em; }

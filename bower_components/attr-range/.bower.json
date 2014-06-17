@@ -1,0 +1,25 @@
+{
+  "name": "attr-range",
+  "authors": [
+    "Dale Sande <dale.sande@gmail.com>"
+  ],
+  "ignore": [
+    ".gitignore",
+    "bower.json",
+    "**/*.md"
+  ],
+  "description": "A simple mixin that allows for default vars to have a range of values",
+  "main": "_attr-range.scss",
+  "license": "MIT",
+  "homepage": "https://github.com/anotheruiguy/attr-range",
+  "_release": "68ef222d50",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "68ef222d509fa0dc2775cfd4f2664cc4ce61b305"
+  },
+  "_source": "git://github.com/anotheruiguy/attr-range.git",
+  "_target": "*",
+  "_originalSource": "attr-range",
+  "_direct": true
+}
